@@ -1,2 +1,2 @@
-# gtcg
-GTCG - UPC
+# VAR
+Virtual and Augmented Reality - UPC Barcelona
