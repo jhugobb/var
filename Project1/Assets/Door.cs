@@ -16,11 +16,11 @@ public class Door : MonoBehaviour {
 
     public void OpenDoor()
     {
-        transform.Translate(0, 100, 0);
+        transform.Translate(0, 50, 0);
     }
 
     public void CloseDoor()
     {
-        transform.Translate(0, -100, 0);
+        transform.Translate(0, -50, 0);
     }
 }

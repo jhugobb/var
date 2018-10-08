@@ -5,7 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - red1
-  - redDoor1
+  - red1door
+  - blue1door
+  - blue1
   layers:
   - Default
   - TransparentFX

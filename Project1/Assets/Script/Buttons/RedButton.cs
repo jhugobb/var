@@ -6,16 +6,14 @@ public class RedButton : MonoBehaviour {
 
 
     private bool isActivated;
-    private float spinForce = 20;
+    private float spinForce = 150;
 
     Door door;
     // Use this for initialization
     void Start () {
         isActivated = false;
-        Renderer myRenderer = GetComponent<Renderer>();
-        myRenderer.material.color = Color.red;
-
-        door = GameObject.FindGameObjectWithTag("redDoor1").GetComponent(typeof(Door)) as Door;
+        string tag = gameObject.tag;
+        door = GameObject.FindGameObjectWithTag(tag + "door").GetComponent(typeof(Door)) as Door;
     }
 	
 	// Update is called once per frame
