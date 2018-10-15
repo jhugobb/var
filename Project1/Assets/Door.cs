@@ -4,23 +4,37 @@ using UnityEngine;
 
 public class Door : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+    private bool open;
+
+    // Use this for initialization
+    void Start () {
+        open = false;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (open == true && transform.position.y > -10)
+        {
+            Vector3 newPos = new Vector3(transform.position.x, Mathf.Max(-10, transform.position.y - 2 * Time.deltaTime), transform.position.z);
+            transform.position = newPos;
+                
+
+        }
+        if (open == false && transform.position.y < 0)
+        {
+            Vector3 newPos = new Vector3(transform.position.x, Mathf.Min(0, transform.position.y + 8 * Time.deltaTime), transform.position.z);
+            transform.position = newPos;
+        }
+    }
 
     public void OpenDoor()
     {
-        transform.Translate(0, 50, 0);
+        open = true;
     }
 
     public void CloseDoor()
     {
-        transform.Translate(0, -50, 0);
+        open = false;
     }
 }

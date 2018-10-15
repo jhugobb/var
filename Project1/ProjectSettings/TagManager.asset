@@ -8,6 +8,35 @@ TagManager:
   - red1door
   - blue1door
   - blue1
+  - red2
+  - red2door
+  - blue2
+  - blue2door
+  - yellow1
+  - yellow1door
+  - red3
+  - red3door
+  - yellow2
+  - yellow2door
+  - blue3
+  - blue3door
+  - whitedoor1
+  - yellowwhitedoor1
+  - bluewhitedoor1
+  - redwhitedoor1
+  - smallred1door
+  - smallred1
+  - smallblue1
+  - smallblue1door
+  - smallwhite
+  - redsmallwhite
+  - smallblue2
+  - brown
+  - browndoor
+  - green
+  - greendoor
+  - bluesmallwhite
+  - yellowsmallwhite
   layers:
   - Default
   - TransparentFX
