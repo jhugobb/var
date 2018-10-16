@@ -7,6 +7,9 @@ public class RedButton : MonoBehaviour {
 
     private bool isActivated;
     private float spinForce = 150;
+    private AudioSource source;
+    public AudioClip shootSound;
+    public bool fix = true;
 
     Door door;
     // Use this for initialization
@@ -14,6 +17,8 @@ public class RedButton : MonoBehaviour {
         isActivated = false;
         string tag = gameObject.tag;
         door = GameObject.FindGameObjectWithTag(tag + "door").GetComponent(typeof(Door)) as Door;
+        source = GameObject.FindGameObjectWithTag("audio").GetComponent<AudioSource>();
+
     }
 	
 	// Update is called once per frame
@@ -26,15 +31,25 @@ public class RedButton : MonoBehaviour {
 
     public void Toggle()
     {
-        if (!isActivated)
+        if (fix)
         {
-            door.OpenDoor();
-            isActivated = true;
+            source.PlayOneShot(shootSound, 1f);
+            if (!isActivated)
+            {
+                door.OpenDoor();
+                isActivated = true;
 
-        } else
-        {
-            door.CloseDoor();
-            isActivated = false;
+            }
+            else
+            {
+                door.CloseDoor();
+                isActivated = false;
+            }
         }
+        else
+        {
+            this.fix = true;
+        }
+        
     }
 }
