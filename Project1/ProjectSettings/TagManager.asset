@@ -37,6 +37,7 @@ TagManager:
   - greendoor
   - bluesmallwhite
   - yellowsmallwhite
+  - audio
   layers:
   - Default
   - TransparentFX
