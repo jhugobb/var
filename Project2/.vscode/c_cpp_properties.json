@@ -3,9 +3,7 @@
         {
             "name": "Linux",
             "includePath": [
-                "/usr/include/qt/QtCore",
-                "/usr/include/qt/QtWidgets",
-                "/usr/include/qt/QtOpenGL"
+                "/usr/include/qt/"
             ]
         }
     ],
