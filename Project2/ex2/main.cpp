@@ -15,15 +15,19 @@ QMatrix4x4 projectionMatrix(const DisplaySurface& display, const Point& eye, flo
     float near = znear;
     float far = zfar;
 
+    Point e1 = eye;
+
+    DisplaySurface surface = display;
+
     QMatrix4x4 result = QMatrix4x4();
 
-    QVector3D e = QVector3D(eye.x, eye.y, eye.z);
+    QVector3D e = QVector3D(e1.x(), e1.y(), e1.z());
 
-    QVector3D u = QVector3D(display.u.x, display.u.y, display.u.z);
+    QVector3D u = QVector3D(surface.u().vx(), surface.u().vy(), surface.u().vz());
     float sideDistance =u.length()/2;
     u.normalize();
 
-    QVector3D v = QVector3D(display.v.x, display.v.y, display.v.z);
+    QVector3D v = QVector3D(surface.v().vx(), surface.v().vy(), surface.v().vz());
     float vertDistance = v.length()/2;
     v.normalize();
     

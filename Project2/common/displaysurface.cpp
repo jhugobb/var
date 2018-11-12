@@ -1,9 +1,7 @@
-#include "point.h"
-#include "vector.h"
 #include "displaysurface.h"
 
-DisplaySurface::DisplaySurface(const Point& orig, const Vector& uvector, const Vector& vvector) {
-    origin = orig;
-    u = uvector;
-    v = vvector;
+DisplaySurface::DisplaySurface(const Point& orig, const Vector& uvector, const Vector& vvector){
+        ori(orig);
+        v_u(uvector);
+        v_v(vvector);
 }
